@@ -1,7 +1,22 @@
-Created Git
+Created Git & Project Folder
+Install required framworks etc. (console commands below)
+    npm install npm -g
+        npm -version (required Node v4 or higher)
+    npm install -g serverless
+        serverless create --template aws-nodejs
+    npm install serverless-offline --save-dev
+        Insert into serverless.yml the following: (insert under service:)
+            plugins:
+                - serverless-offline
+        Ensure serverless.yml has region: eu-west-1
+
+
+
+
 File naming convention
-    -   FolderName
-    -   FileName
+        folder_name
+        fileName
+
 Folder structure established
 
 
