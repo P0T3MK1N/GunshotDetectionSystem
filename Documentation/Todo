@@ -1,0 +1,23 @@
+TODO:
+a. Create / name files locally + git
+b. Peer review
+c. Code one
+d. Peer review
+e. Code rest
+f. Peer review
+g. Deploy
+h. Peer review
+
+1. Get mock endpoint up for Jean
+    1.1 Mock local
+    1.2 Deploy dev, qa [dev, qa, prod]
+    1.3 Protect IAM
+    1.4 URL pointing
+    1.5 Test
+
+2. To DB *1 table initially till it works then more
+    2.1 DB local
+    2.2 Local code level debug (ide debug if possible)
+    2.3 DB Migration
+    2.4 Writes to DB
+    2.5 Deploy dev, qa [dev, qa, prod] **(repeat step 1,5)
