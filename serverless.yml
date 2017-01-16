@@ -57,8 +57,13 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  incidents:
+      handler: api/Incidents.incidents
+      events:
+        - http:
+            path: api/incidents
+            method: post
+            cors: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

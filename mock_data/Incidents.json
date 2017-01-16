@@ -1,0 +1,30 @@
+[
+    {
+      "start_time": "01:01",
+      "location": "123 Henry RD",
+      "city": "Bloemfontein",
+      "id": 1,
+      "latitude": "00.000000",
+      "longitude": "00.000000",
+      "probability": 98,
+      "gunshots": 8,
+      "weapons": [
+        "9mm",
+        ".38 cal"
+      ]
+    },
+    {
+      "start_time": "01:01",
+      "location": "123 Henry RD",
+      "city": "Bloemfontein",
+      "id": 1,
+      "latitude": "00.000000",
+      "longitude": "00.000000",
+      "probability": 98,
+      "gunshots": 8,
+      "weapons": [
+        "9mm",
+        ".38 cal"
+      ]
+    }
+  ]

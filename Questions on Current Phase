@@ -1,0 +1,22 @@
+THIS FILE IS NOT TO BE USED WITH PROJECT, PERSONAL QUESTIONS AND QUERIES FILE TO BE DELETED BEFORE COMMIT FOR PUBLIC USE
+what folders?
+    things that are being done:
+
+    module reporting (status)
+    module reporting (events)
+        events are grouped to incidents, 1 module detecting 1 gunshot is an event.
+    module updating
+
+
+
+
+
+    user login
+        authentication
+    incidents panel
+        incidents have events, multiple modules detecting 1 gunshot have their individual event grouped as an event within the incident panel on ui
+        playback of event per module that detected, 10s pre and 10s post
+    reporting
+        historical data, zip package of recording associated with
+
+
