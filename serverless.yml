@@ -10,7 +10,7 @@ provider:
   region: eu-west-1
 
 functions:
-  detectorsstatus:
+  detectorsStatus:
         handler: api/DetectorsStatus.detectorsstatus
         events:
           - http:
@@ -46,9 +46,16 @@ functions:
             method: get
             cors: true
   playbackList:
-    handler: api/PlaybackList.playbackList
-    events:
+      handler: api/PlaybackList.playbackList
+      events:
         - http:
             path: api/PlaybackList
+            method: get
+            cors: true
+  events:
+      handler: api/Events.events
+      events:
+        - http:
+            path: api/Events
             method: get
             cors: true
