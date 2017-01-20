@@ -1,18 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var Incidents = require('../services/Incidents');
+var DetectorStatus = require('../services/DetectorStatus');
 
 /**
- * Incidents endpoint
+ * detector status endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.detectorstatus = (event, context, callback) => {//handler
 
-    //var body = JSON.parse(event.body);//todo remove example line
-    Incidents.getCurrentIncident(
+    DetectorStatus.getCurrentIncident(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

@@ -55,6 +55,14 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+functions:
+  detector:
+      handler: api/DetectorStatus.detectorstatus
+      events:
+        - http:
+            path: api/detectorstatus
+            method: get
+            cors: true
 
 functions:
   incidents:
@@ -62,7 +70,7 @@ functions:
       events:
         - http:
             path: api/incidents
-            method: post
+            method: get
             cors: true
 
 #    The following are a few example events you can configure

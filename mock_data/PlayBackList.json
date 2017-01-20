@@ -1,0 +1,25 @@
+[
+  {
+    "detector_id": 100,
+    "street_address": "123 Henry RD",
+    "city": "Bloemfontein",
+    "latitude": "00.000000",
+    "longitude": "00.000000",
+    "audio": "api/audio/filename.wav",
+    "distance": 100,
+    "incident_id": 1,
+    "event_id": 1
+  },
+  {
+    "detector_id": 100,
+    "street_address": "123 Henry RD",
+    "city": "Bloemfontein",
+    "latitude": "00.000000",
+    "longitude": "00.000000",
+    "audio": "api/audio/filename.wav",
+    "distance": 100,
+    "incident_id": 1,
+    "event_id": 1
+  }
+]
+

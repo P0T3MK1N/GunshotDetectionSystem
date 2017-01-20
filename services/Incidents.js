@@ -7,10 +7,10 @@ class incidents {
      * Get Current Incidents
      * @param callback
      */
-    getCurrentIncident(callback) {
+    static getCurrentIncident(callback) {
         var incidents = require('../mock_data/Incidents.json');//get data
         if (incidents) {//if data return data
-            callback(null, incidents,);
+            callback(null, incidents);
         } else {//else return error
             callback({error: 'Could not retrieve data'}, null);
         }
@@ -18,4 +18,5 @@ class incidents {
 
 }
 
-module.exports = new incidents;
+module.exports = incidents;
+
