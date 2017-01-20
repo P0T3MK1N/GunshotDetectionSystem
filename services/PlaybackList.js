@@ -4,11 +4,11 @@
 
 class playbackList {
     /**
-     * Get Playback Panel
+     * Get Playback List
      * @param callback
      */
     static getPlaybackList(callback) {
-        var playbackList = require('../mock_data/PlayBackList.json');//get data
+        var playbackList = require('../mock_data/PlaybackList.json');//get data
         if (playbackList) {//if data return data
             callback(null, playbackList);
         } else {//else return error

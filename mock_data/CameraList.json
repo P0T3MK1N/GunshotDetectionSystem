@@ -1,9 +1,16 @@
 [
   {"id": 1,
     "camera_sector": 1,
-    "location": "123 Henry St",
+    "location": "1 Street Road",
     "latitude": "00.000000",
     "longitude": "00.000000",
     "direction": "NNE",
-    "distance": 50}
+    "distance": 50},
+  {"id": 2,
+    "camera_sector": 1,
+    "location": "2 Road Street",
+    "latitude": "00.000000",
+    "longitude": "00.000000",
+    "direction": "NNW",
+    "distance": 100}
 ]

@@ -1,7 +1,7 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var DetectorStatus = require('../services/DetectorStatus');
+var DetectorsStatus = require('../services/DetectorsStatus');
 
 /**
  * detector status endpoint
@@ -9,9 +9,9 @@ var DetectorStatus = require('../services/DetectorStatus');
  * @param context
  * @param callback
  */
-module.exports.detectorstatus = (event, context, callback) => {//handler
+module.exports.detectorsstatus = (event, context, callback) => {//handler
 
-    DetectorStatus.getDetectorStatus(
+    DetectorsStatus.getDetectorsStatus(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

@@ -11,7 +11,7 @@ var EventList = require('../services/EventList');
  */
 module.exports.eventList = (event, context, callback) => {//handler
 
-    Incidents.getEventList(
+    EventList.getEventList(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

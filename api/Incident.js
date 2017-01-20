@@ -11,7 +11,7 @@ var Incident = require('../services/Incident');
  */
 module.exports.incident = (event, context, callback) => {//handler
 
-    Incidents.getIncident(
+    Incident.getIncident(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

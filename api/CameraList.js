@@ -11,7 +11,7 @@ var CameraList = require('../services/CameraList');
  */
 module.exports.cameraList = (event, context, callback) => {//handler
 
-    Incidents.getCameraList(
+    CameraList.getCameraList(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

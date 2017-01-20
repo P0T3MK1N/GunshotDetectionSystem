@@ -10,11 +10,11 @@ provider:
   region: eu-west-1
 
 functions:
-  detectorstatus:
-        handler: api/DetectorStatus.detectorstatus
+  detectorsstatus:
+        handler: api/DetectorsStatus.detectorsstatus
         events:
           - http:
-              path: api/DetectorStatus
+              path: api/DetectorsStatus
               method: get
               cors: true
   incidents:
@@ -38,14 +38,14 @@ functions:
             path: api/EventList
             method: get
             cors: true
-  cameraPanel:
-    handler: api/CameraPanel.cameraPanel
+  cameraList:
+    handler: api/CameraList.cameraList
     events:
         - http:
             path: api/CameraList
             method: get
             cors: true
-    playList:
+    playbackList:
       handler: api/PlaybackList.playbacklist
       events:
           - http:

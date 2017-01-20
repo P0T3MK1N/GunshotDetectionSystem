@@ -1,0 +1,44 @@
+[
+  {
+    "sector_id": 1,
+    "detector_list": [
+      {
+        "street_address": "1 Street Road",
+        "city": "City",
+        "id": 1,
+        "latitude": "00.000000",
+        "longitude": "00.000000",
+        "status": "good"
+      },
+      {
+        "street_address": "2  Road Street",
+        "city": "City",
+        "id": 2,
+        "latitude": "00.000000",
+        "longitude": "00.000000",
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "sector_id": 2,
+    "detector_list": [
+      {
+        "street_address": "3 Avenue Way",
+        "city": "City",
+        "id": 3,
+        "latitude": "00.000000",
+        "longitude": "00.000000",
+        "status": "good"
+      },
+      {
+        "street_address": "4 Way Avenue",
+        "city": "City",
+        "id": 3,
+        "latitude": "00.000000",
+        "longitude": "00.000000",
+        "status": "good"
+      }
+    ]
+  }
+]

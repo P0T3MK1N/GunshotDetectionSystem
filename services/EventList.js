@@ -8,9 +8,9 @@ class eventlist {
      * @param callback
      */
     static getEventList(callback) {
-        var eventList = require('../mock_data/Incidents.json');//get data
-        if (eventList) {//if data return data
-            callback(null, eventList);
+        var eventlist = require('../mock_data/EventList.json');//get data
+        if (eventlist) {//if data return data
+            callback(null, eventlist);
         } else {//else return error
             callback({error: 'Could not retrieve data'}, null);
         }
@@ -18,5 +18,5 @@ class eventlist {
 
 }
 
-module.exports = eventList;
+module.exports = eventlist;
 
