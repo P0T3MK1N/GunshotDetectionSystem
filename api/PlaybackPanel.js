@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var DetectorStatus = require('../services/DetectorStatus');
+var PlaybackPanel = require('../services/PlaybackPanel');
 
 /**
- * detector status endpoint
+ * Incidents endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.detectorstatus = (event, context, callback) => {//handler
+module.exports.playbackPanel = (event, context, callback) => {//handler
 
-    DetectorStatus.getDetectorStatus(
+    Incidents.getPlaybackPanel(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

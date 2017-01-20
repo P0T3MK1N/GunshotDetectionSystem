@@ -4,11 +4,11 @@
 
 class detectorstatus {
     /**
-     * Get Current Incidents
+     * Get Detector Status
      * @param callback
      */
     static getDetectorStatus(callback) {
-        var incidents = require('../mock_data/DetectorStatus.json');//get data
+        var detectorstatus = require('../mock_data/DetectorStatus.json');//get data
         if (detectorstatus) {//if data return data
             callback(null, detectorstatus);
         } else {//else return error

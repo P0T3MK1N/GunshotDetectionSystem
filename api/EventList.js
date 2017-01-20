@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var DetectorStatus = require('../services/DetectorStatus');
+var EventList = require('../services/EventList');
 
 /**
- * detector status endpoint
+ * Event List endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.detectorstatus = (event, context, callback) => {//handler
+module.exports.eventList = (event, context, callback) => {//handler
 
-    DetectorStatus.getDetectorStatus(
+    Incidents.getEventList(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

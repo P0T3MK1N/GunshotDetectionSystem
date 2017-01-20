@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var DetectorStatus = require('../services/DetectorStatus');
+var CameraList = require('../services/CameraList');
 
 /**
- * detector status endpoint
+ * camera List endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.detectorstatus = (event, context, callback) => {//handler
+module.exports.cameraList = (event, context, callback) => {//handler
 
-    DetectorStatus.getDetectorStatus(
+    Incidents.getCameraList(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

@@ -11,7 +11,6 @@ var Incidents = require('../services/Incidents');
  */
 module.exports.incidents = (event, context, callback) => {//handler
 
-    //var body = JSON.parse(event.body);//todo remove example line
     Incidents.getCurrentIncident(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
