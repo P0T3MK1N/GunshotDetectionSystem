@@ -45,10 +45,10 @@ functions:
             path: api/CameraList
             method: get
             cors: true
-    playbackList:
-      handler: api/PlaybackList.playbacklist
-      events:
-          - http:
-              path: api/PlaybackList
-              method: get
-              cors: true
+  playbackList:
+    handler: api/PlaybackList.playbackList
+    events:
+        - http:
+            path: api/PlaybackList
+            method: get
+            cors: true
