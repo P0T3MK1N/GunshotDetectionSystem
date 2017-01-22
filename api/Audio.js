@@ -10,7 +10,7 @@ var Audio = require('../services/Audio.js');
  * @param callback
  */
 module.exports.audio = (event, context, callback) => {//handler
-
+    //eventId = ???;
     Audio.getAudio(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {

@@ -7,7 +7,7 @@ class incident {
      * Get Incident
      * @param callback
      */
-    static getCurrentIncident(callback) {
+    static getIncident(callback) {
         var incident = require('../mock_data/Incident.json');//get data
         if (incident) {//if data return data
             callback(null, incident);

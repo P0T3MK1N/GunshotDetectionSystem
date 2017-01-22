@@ -8,7 +8,7 @@ class events {
      * @param callback
      */
     static getEvents(callback) {
-        var events = require('../mock_data/Events.json');//get data
+        var events = require('../../mock_data/Events.json');//get data
         if (events) {//if data return data
             callback(null, events);
         } else {//else return error

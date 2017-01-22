@@ -1,25 +1,18 @@
 [
   {
     "module_id": 100,
-    "street_address": "1 Street Road",
-    "city": "City",
-    "latitude": "00.000000",
-    "longitude": "00.000000",
-    "audio": "api/Audio/filename1.wav",
-    "distance": 100,
-    "incident_id": 1,
-    "event_id": 1
+    "event_id": 1,
+    "module_distance_from_event": 100,
+    "audio": "api/Audio/filename1.wav"
+
+
   },
   {
-    "module_id": 100,
-    "street_address": "1 Street Road",
-    "city": "City",
-    "latitude": "00.000000",
-    "longitude": "00.000000",
-    "audio": "api/Audio/filename2.wav",
-    "distance": 200,
-    "incident_id": 1,
-    "event_id": 1
+    "module_id": 101,
+    "event_id": 1,
+    "module_distance_from_event": 200,
+    "audio": "api/Audio/filename2.wav"
+
   }
 ]
 

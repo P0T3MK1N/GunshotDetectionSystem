@@ -8,7 +8,7 @@ class cameras {
      * @param callback
      */
     static getCameras(callback) {
-        var cameras = require('../mock_data/Cameras.json');//get data
+        var cameras = require('../../mock_data/Cameras.json');//get data
         if (cameras) {//if data return data
             callback(null, cameras);
         } else {//else return error
