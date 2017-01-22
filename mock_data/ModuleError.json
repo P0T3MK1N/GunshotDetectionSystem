@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1",
+    "module_name": "module_1",
+    "error_code": "error code",
+    "error_message": "error message",
+    "error_detail": "error detail",
+    "error_time": "dts",
+    "module_status": [
+      {
+        "id": 1,
+        "module_name": "module_1",
+        "module_version": "v1.0",
+        "dts": "dts",
+        "gps_signal": 5,
+        "module_latitude": "00.000000",
+        "module_longitude": "00.000000",
+        "street_address": "1 Street Road",
+        "city": "City",
+        "signal_3g": 5,
+        "snr": "000",
+        "network_usage": 100,
+        "ip_address": "000.000.00.00",
+        "uptime": "dts",
+        "ac_power": true,
+        "battery_status": "charging",
+        "cover_status": true,
+        "storage_status": 100,
+        "cpu_temp": 100,
+        "ram": 100,
+        "cpu_utilization": 100,
+        "status": "good"
+      }
+    ]
+  }
+]

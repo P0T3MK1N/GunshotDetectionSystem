@@ -1,16 +1,16 @@
 [
   {
-    "module_id": 100,
+    "module_id": 1,
     "event_id": 1,
-    "module_distance_from_event": 100,
+    "module_distance_from_event": 50,
     "audio": "api/Audio/filename1.wav"
 
 
   },
   {
-    "module_id": 101,
+    "module_id": 2,
     "event_id": 1,
-    "module_distance_from_event": 200,
+    "module_distance_from_event": 100,
     "audio": "api/Audio/filename2.wav"
 
   }

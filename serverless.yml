@@ -7,62 +7,15 @@ plugins:
 provider:
   name: aws
   runtime: nodejs4.3
-  region: eu-west-1
+  #region: eu-west-1
 
 functions:
-  moduleStatus:
-        handler: api/ModuleStatus.moduleStatus
-        events:
-          - http:
-              path: api/ModuleStatus
-              method: get
-              cors: true
-  incidents:
-        handler: api/Incidents.incidents
-        events:
-          - http:
-              path: api/Incidents
-              method: get
-              cors: true
-  incident:
-        handler: api/Incident.incident
-        events:
-          - http:
-              path: api/Incident
-              method: get
-              cors: true
-  events:
-        handler: api/Events.events
-        events:
-          - http:
-              path: api/Events
-              method: get
-              cors: true
   audio:
-        handler: api/Audio.audio
-        events:
-          - http:
-              path: api/Audio
-              method: get
-              cors: true
-  cameras:
-        handler: api/Cameras.cameras
-        events:
-          - http:
-              path: api/Cameras
-              method: get
-              cors: true
-  report:
-        handler: api/Report.report
-        events:
-          - http:
-              path: api/Report
-              method: get
-              cors: true
-  moduleUpdate:
-        handler: api/ModuleUpdate.moduleUpdate
-        events:
-          - http:
-              path: api/ModuleUpdate
-              method: get
-              cors: true
+    handler: api/events.audio
+    events:
+      - http:
+          path: api/events
+          method: get
+          cors: true
+
+

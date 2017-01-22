@@ -4,7 +4,7 @@
 
 class audio {
     /**
-     * Get Playback List
+     * Get Audio List
      * @param callback
      */
     static getAudio(callback) {
