@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var Incidents = require('../services/Incidents.js');
+var Cameras = require('../services/Cameras');
 
 /**
- * Incidents endpoint
+ * Cameras endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.cameras = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    Cameras.getCameras(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

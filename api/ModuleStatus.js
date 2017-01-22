@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var Incidents = require('../services/Incidents.js');
+var ModuleStatus = require('../services/ModuleStatus.js');
 
 /**
- * Incidents endpoint
- * @param event
- * @param context
- * @param callback
+ * ModuleStatus endpoint
+ * @param event framework related
+ * @param context framework related
+ * @param callback framework related, response contained
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.moduleStatus = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    ModuleStatus.getModuleStatus(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

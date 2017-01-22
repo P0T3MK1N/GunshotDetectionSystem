@@ -4,7 +4,7 @@
 var Events = require('../services/Events');
 
 /**
- * Incidents endpoint
+ * Events endpoint
  * @param event
  * @param context
  * @param callback

@@ -1,7 +1,7 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var Incidents = require('../services/Incidents.js');
+var Report = require('../services/Report.js');
 
 /**
  * Incidents endpoint
@@ -9,9 +9,9 @@ var Incidents = require('../services/Incidents.js');
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.report = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    Report.getReport(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

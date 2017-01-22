@@ -1,17 +1,17 @@
 /**
  * Created by halla on 1/16/2017.
  */
-var Incidents = require('../services/Incidents.js');
+var Audio = require('../services/Audio.js');
 
 /**
- * Incidents endpoint
+ * PlaybackList endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.audio = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    Audio.getAudio(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});

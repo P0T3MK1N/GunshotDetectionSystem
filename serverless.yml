@@ -10,60 +10,52 @@ provider:
   region: eu-west-1
 
 functions:
-  detectorsStatus:
-        handler: api/DetectorsStatus.detectorsstatus
+  moduleStatus:
+        handler: api/ModuleStatus.moduleStatus
         events:
           - http:
-              path: api/DetectorsStatus
+              path: api/ModuleStatus
               method: get
               cors: true
   incidents:
-      handler: api/Incidents.incidents
-      events:
-        - http:
-            path: api/Incidents
-            method: get
-            cors: true
-  incident:
-      handler: api/Incident.incident
-      events:
-        - http:
-            path: api/Incident
-            method: get
-            cors: true
-  eventList:
-      handler: api/EventList.eventList
-      events:
-        - http:
-            path: api/EventList
-            method: get
-            cors: true
-  cameraList:
-    handler: api/CameraList.cameraList
-    events:
-        - http:
-            path: api/CameraList
-            method: get
-            cors: true
-  playbackList:
-      handler: api/PlaybackList.playbackList
-      events:
-        - http:
-            path: api/PlaybackList
-            method: get
-            cors: true
+        handler: api/Incidents.incidents
+        events:
+          - http:
+              path: api/Incidents
+              method: get
+              cors: true
   events:
-      handler: api/Events.events
-      events:
-        - http:
-            path: api/Events
-            method: get
-            cors: true
-  reports:
-      handler: api/Reports.reports
-      events:
-        - http:
-            path: api/Reports
-            method: get
-            method: post
-            cors: true
+        handler: api/Events.events
+        events:
+          - http:
+              path: api/Events
+              method: get
+              cors: true
+  audio:
+        handler: api/Audio.audio
+        events:
+          - http:
+              path: api/Audio
+              method: get
+              cors: true
+  cameras:
+        handler: api/Cameras.cameras
+        events:
+          - http:
+              path: api/Cameras
+              method: get
+              cors: true
+  report:
+        handler: api/Report.report
+        events:
+          - http:
+              path: api/Report
+              method: get
+              cors: true
+  moduleUpdate:
+        handler: api/ModuleUpdate.moduleUpdate
+        events:
+          - http:
+              path: api/ModuleUpdate
+              method: get
+              cors: true

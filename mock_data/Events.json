@@ -1,1 +1,32 @@
-"Placeholder Text"
+[
+  {
+    "id": 1,
+    "start_time": "dts",
+    "location": "1 Street Road",
+    "city": "City",
+    "latitude": "00.000000",
+    "longitude": "00.000000",
+    "sector_id": "00.000000",
+    "probability": 95,
+    "gunshots": 8,
+    "weapons": "9mm",
+    "camera_list": [],
+    "playback_list": [],
+    "incident_id": 1
+  },
+  {
+    "id": 2,
+    "start_time": "dts",
+    "location": "2 Street Road",
+    "city": "City",
+    "latitude": "00.000000",
+    "longitude": "00.000000",
+    "sector_id": "00.000000",
+    "probability": 95,
+    "gunshots": 8,
+    "weapons": ".38cal",
+    "camera_list": [],
+    "playback_list": [],
+    "incident_id": 1
+  }
+]
