@@ -14,7 +14,7 @@
                 - serverless-offline
     Ensure serverless.yml has region: eu-west-1
 
-# IMPORTANT (familiarise yourself with the libraries used here and the project structure)
+# IMPORTANT (familsls offlineiarise yourself with the libraries used here and the project structure)
 0. Core system components are:
     - Selenium (browser based testing/ black box testing)
     - Mongoose (for DB modelling)  *Made available as global.mongoose and global.schema in app.js*

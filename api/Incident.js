@@ -9,7 +9,7 @@ var Incident = require('../services/Incident');
  * @param context
  * @param callback
  */
-module.exports.incident = (event, context, callback) => {//handler
+module.exports.getCurrentIncident = (event, context, callback) => {//handler
 
     Incident.getIncident(
         (error, result) => { // [function: param1([param1, param2])]

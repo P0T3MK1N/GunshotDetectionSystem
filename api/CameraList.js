@@ -9,7 +9,7 @@ var CameraList = require('../services/CameraList');
  * @param context
  * @param callback
  */
-module.exports.cameraList = (event, context, callback) => {//handler
+module.exports.currentCameraList = (event, context, callback) => {//handler
 
     CameraList.getCameraList(
         (error, result) => { // [function: param1([param1, param2])]

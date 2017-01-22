@@ -7,7 +7,7 @@ class cameraList {
      * Get Camera Panel
      * @param callback
      */
-    static getCameraList(callback) {
+    static currentCameraList(callback) {
         var cameraList = require('../mock_data/CameraList.json');//get data
         if (cameraList) {//if data return data
             callback(null, cameraList);

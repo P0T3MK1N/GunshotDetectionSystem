@@ -59,3 +59,11 @@ functions:
             path: api/Events
             method: get
             cors: true
+  reports:
+      handler: api/Reports.reports
+      events:
+        - http:
+            path: api/Reports
+            method: get
+            method: post
+            cors: true
