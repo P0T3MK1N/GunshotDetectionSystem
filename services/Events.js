@@ -15,8 +15,6 @@ class events {
             callback({error: 'Could not retrieve data'}, null);
         }
     }
-
 }
 
 module.exports = events;
-

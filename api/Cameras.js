@@ -2,20 +2,20 @@
  * Created by halla on 1/16/2017.
  */
 
-var Events = require('../services/Events.js');
+var Cameras = require('../services/Cameras.js');
 
 /**
- * Events API endpoint
+ * Cameras API endpoint
  * @param event framework related
  * @param context framework related
  * @param callback framework related, response contained
  */
 
-module.exports.events = (event, context, callback) => {//handler
+module.exports.cameras = (event, context, callback) => {//handler
 
-    var incidentId = event.pathParameters.id;
+    var eventsId = event.pathParameters.id;
 
-    Events.getEvents(
+    Cameras.getCameras(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 console.log(error)

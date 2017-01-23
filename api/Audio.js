@@ -2,20 +2,20 @@
  * Created by halla on 1/16/2017.
  */
 
-var Events = require('../services/Events.js');
+var Audio = require('../services/Audio.js');
 
 /**
- * Events API endpoint
+ * Audio API endpoint
  * @param event framework related
  * @param context framework related
  * @param callback framework related, response contained
  */
 
-module.exports.events = (event, context, callback) => {//handler
+module.exports.audio = (event, context, callback) => {//handler
 
-    var incidentId = event.pathParameters.id;
+    var eventsId = event.pathParameters.id;
 
-    Events.getEvents(
+    Audio.getAudio(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 console.log(error)

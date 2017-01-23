@@ -1,4 +1,4 @@
-
+#API SERVERLESS FILE
 service: aws-nodejs
 
 plugins:
@@ -7,15 +7,59 @@ plugins:
 provider:
   name: aws
   runtime: nodejs4.3
-  #region: eu-west-1
+  region: eu-west-1
 
 functions:
-  audio:
-    handler: api/events.audio
+  ModuleUpdate:
+    handler: api/ModuleUpdate.moduleUpdate
     events:
       - http:
-          path: api/events
+          path: api/ModuleUpdate
           method: get
           cors: true
+  ModuleStatus:
+    handler: api/ModuleStatus.moduleStatus
+    events:
+      - http:
+          path: api/ModuleStatus
+          method: get
+          cors: true
+  ModuleError:
+    handler: api/ModuleError.moduleError
+    events:
+      - http:
+          path: api/ModuleError
+          # POST METHOD
+          method: get
+          cors: true
+  Events:
+    handler: api/Events.events
+    events:
+      - http:
+          path: api/Events
+          method: get
+          cors: true
+  Cameras:
+    handler: api/Cameras.cameras
+    events:
+      - http:
+          path: api/Cameras
+          method: get
+          cors: true
+  Audio:
+    handler: api/Audio.audio
+    events:
+      - http:
+          path: api/Audio
+          method: get
+          cors: true
+  Report:
+    handler: api/Report.report
+    events:
+      - http:
+          path: api/Report
+          method: get
+          cors: true
+
 
 

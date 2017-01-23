@@ -4,7 +4,7 @@
 
 class audio {
     /**
-     * Get Audio List
+     * Get Current Incidents
      * @param callback
      */
     static getAudio(callback) {
@@ -16,6 +16,4 @@ class audio {
         }
     }
 }
-
 module.exports = audio;
-
