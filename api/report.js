@@ -4,7 +4,7 @@
 var Report = require('../services/Report.js');
 
 /**
- * Incidents endpoint
+ * Report endpoint
  * @param event
  * @param context
  * @param callback

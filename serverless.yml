@@ -60,6 +60,25 @@ functions:
           path: api/Report
           method: get
           cors: true
-
-
+  Incidents:
+    handler: api/Incidents.incidents
+    events:
+      - http:
+          path: api/Incidents
+          method: get
+          cors: true
+  Incident:
+    handler: api/Incident.incident
+    events:
+      - http:
+          path: api/Incident
+          method: get
+          cors: true
+  IncidentClose:
+    handler: api/IncidentClose.incidentclose
+    events:
+      - http:
+          path: api/IncidentClose
+          method: get
+          cors: true
 

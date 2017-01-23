@@ -1,0 +1,10 @@
+[
+  {
+    "operator_id": "string",
+    "supervisor": "string",
+    "station": "string",
+    "case": "string",
+    "comments": "string",
+    "dts": "dts"
+  }
+]

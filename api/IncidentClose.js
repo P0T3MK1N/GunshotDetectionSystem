@@ -1,18 +1,21 @@
 /**
  * Created by halla on 1/16/2017.
  */
-//var Incidents = require('../services/Incidents.js');
-//var Incident = require('../services/Incident');
+
+var Incident = require('../services/IncidentClose');
 
 /**
- * Incidents endpoint
+ * Incident Close endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+module.exports.incidentClose = (event, context, callback) => {//handler
+
+    var incidentId = event.pathParameters.id;
+
+    IncidentClose.getIncidentClose(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});
@@ -22,4 +25,3 @@ module.exports.incidents = (event, context, callback) => {//handler
             }
         });
 };
-

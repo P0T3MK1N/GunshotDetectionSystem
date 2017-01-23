@@ -1,18 +1,20 @@
 /**
  * Created by halla on 1/16/2017.
  */
-//var Incidents = require('../services/Incidents.js');
-//var Incident = require('../services/Incident');
+
+var Incidents = require('../services/Incident.js');
 
 /**
- * Incidents endpoint
+ * Incident endpoint
  * @param event
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+module.exports.incident = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    var incidentId = event.pathParameters.id;
+    
+    Incidents.getIncident(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});
