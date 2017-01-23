@@ -12,8 +12,11 @@ h. Peer review
 
 1. Get mock endpoint up for Jean
     1.1 Mock local
+
     1.2 Deploy dev, qa [dev, qa, prod]
+        TESTING DEPLOYMENT
     1.3 Protect IAM
+        AIM ROLE AND USER PERMISSIONS SET
     1.4 URL pointing
     1.5 Test
 

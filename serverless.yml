@@ -1,5 +1,9 @@
 #API SERVERLESS FILE
-service: aws-nodejs
+
+#version pinned to ensure all use same version of framework.
+frameworkVersion: "=1.5"
+
+service: GunShotDetectionSystem
 
 plugins:
   - serverless-offline
@@ -7,7 +11,11 @@ plugins:
 provider:
   name: aws
   runtime: nodejs4.3
+  stage: dev
   region: eu-west-1
+  profile: development
+  #for Development on Serverless Framework. provides full acccess to ApiGateway, DynamoDb and S3.
+  #role: arn:aws:iam::350584043451:role/ServerlessFrameworkUser
 
 functions:
   ModuleStatusGet:
