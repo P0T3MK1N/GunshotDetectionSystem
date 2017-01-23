@@ -1,0 +1,16 @@
+[
+  {
+    "module_id": 1,
+    "module_name": "module 1",
+    "module_latitude": "00.000000",
+    "module_longitude": "00.000000",
+    "gunshot_event": {
+      "9mm": 90,
+      ".38": 60,
+      "snr": "000",
+      "loudness": "000",
+      "dts": "dts"
+    },
+    "audio_file": "api/Audio/filename.wav"
+  }
+]

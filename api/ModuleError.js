@@ -12,7 +12,10 @@ var ModuleError = require('../services/ModuleError');
  */
 
 module.exports.moduleError = (event, context, callback) => {//handler
-    ModuleError.getModuleError(
+
+    var moduleId = event.pathParameters.id;
+
+    ModuleError.postModuleError(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null, {statusCode: 402, body: error});

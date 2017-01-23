@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "module_id": "1",
     "module_name": "module_1",
     "error_code": "error code",
     "error_message": "error message",
@@ -8,15 +8,15 @@
     "error_time": "dts",
     "module_status": [
       {
-        "id": 1,
+        "module_id": 1,
         "module_name": "module_1",
         "module_version": "v1.0",
         "dts": "dts",
         "gps_signal": 5,
         "module_latitude": "00.000000",
         "module_longitude": "00.000000",
-        "street_address": "1 Street Road",
-        "city": "City",
+        "module_street_address": "1 Street Road",
+        "module_city": "City",
         "signal_3g": 5,
         "snr": "000",
         "network_usage": 100,

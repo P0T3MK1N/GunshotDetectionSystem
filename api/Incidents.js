@@ -1,11 +1,11 @@
 /**
  * Created by halla on 1/16/2017.
  */
-//var Incidents = require('../services/Incidents.js');
-//var Incident = require('../services/Incident');
+
+var Incidents = require('../services/Incidents.js');
 
 /**
- * Incidents endpoint
+ * Incidents API endpoint
  * @param event
  * @param context
  * @param callback

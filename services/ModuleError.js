@@ -7,7 +7,7 @@ class moduleError {
      * Get ModuleStatus
      * @param callback
      */
-    static getModuleError(callback) {
+    static postModuleError(callback) {
         var moduleError = require('../mock_data/ModuleError.json');//get data
         if (moduleError) {//if data return data
             callback(null, moduleError);

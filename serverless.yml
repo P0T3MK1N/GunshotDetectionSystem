@@ -10,6 +10,27 @@ provider:
   region: eu-west-1
 
 functions:
+  ModuleStatusGet:
+    handler: api/ModuleStatus.moduleStatus
+    events:
+      - http:
+          path: api/ModuleStatus
+          method: get
+          cors: true
+  ModuleStatusPost:
+    handler: api/ModuleStatus.moduleStatus
+    events:
+      - http:
+          path: api/ModuleStatus
+          method: post
+          cors: true
+  ModuleEvent:
+    handler: api/ModuleEvent.moduleEvent
+    events:
+      - http:
+          path: api/ModuleEvent
+          method: post
+          cors: true
   ModuleUpdate:
     handler: api/ModuleUpdate.moduleUpdate
     events:
@@ -17,20 +38,12 @@ functions:
           path: api/ModuleUpdate
           method: get
           cors: true
-  ModuleStatus:
-    handler: api/ModuleStatus.moduleStatus
-    events:
-      - http:
-          path: api/ModuleStatus
-          method: get
-          cors: true
   ModuleError:
     handler: api/ModuleError.moduleError
     events:
       - http:
           path: api/ModuleError
-          # POST METHOD
-          method: get
+          method: post
           cors: true
   Events:
     handler: api/Events.events
@@ -79,6 +92,13 @@ functions:
     events:
       - http:
           path: api/IncidentClose
-          method: get
+          method: post
+          cors: true
+  MergeIncidents:
+    handler: api/MergeIncidents.mergeIncidents
+    events:
+      - http:
+          path: api/mergeIncidents
+          method: put
           cors: true
 

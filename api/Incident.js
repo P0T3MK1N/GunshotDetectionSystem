@@ -5,11 +5,12 @@
 var Incidents = require('../services/Incident.js');
 
 /**
- * Incident endpoint
+ * Incident API endpoint
  * @param event
  * @param context
  * @param callback
  */
+
 module.exports.incident = (event, context, callback) => {//handler
 
     var incidentId = event.pathParameters.id;
