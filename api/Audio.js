@@ -13,7 +13,7 @@ var Audio = require('../services/Audio.js');
 
 module.exports.audio = (event, context, callback) => {//handler
 
-    var eventsId = event.pathParameters.id;
+    //var eventsId = event.pathParameters.id;
 
     Audio.getAudio(
         (error, result) => { // [function: param1([param1, param2])]
