@@ -4,12 +4,12 @@
  * Created by halla on 1/16/2017.
  */
 
-class incidents {
+function Incidents () {
     /**
      * Get Current Incidents
      * @param callback
      */
-    static getCurrentIncidents(callback) {
+    Incidents.prototype.getCurrentIncidents = function(callback) {
         var incidents = require('../mock_data/Incidents.json');//get data
         if (incidents) {//if data return data
             callback(null, incidents);
@@ -20,4 +20,4 @@ class incidents {
 
 }
 
-module.exports = incidents;
+module.exports = new Incidents();

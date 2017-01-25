@@ -4,7 +4,7 @@
  * Created by halla on 1/16/2017.
  */
 
-var Incidents = require('../services/Incidents.js');
+//var Incidents = require('../services/Incidents.js');
 
 /**
  * Incidents API endpoint
@@ -14,7 +14,7 @@ var Incidents = require('../services/Incidents.js');
  */
 module.exports.incidents = (event, context, callback) => {//handler
 
-    Incidents.getCurrentIncidents(
+    getCurrentIncidents(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
                 callback(null,{statusCode: 402, body: error});
@@ -25,3 +25,11 @@ module.exports.incidents = (event, context, callback) => {//handler
         });
 };
 
+function getCurrentIncidents(callback) {
+    var incidents = require('../mock_data/Incidents.json');//get data
+    if (incidents) {//if data return data
+        callback(null, incidents);
+    } else {//else return error
+        callback({error: 'Could not retrieve data'}, null);
+    }
+}

@@ -3,7 +3,7 @@
 #version pinned to ensure all use same version of framework.
 #frameworkVersion: "=1.5"
 
-service: GunShotDetectionSystem
+service: GunShotDetectionPlatformTest1
 
 plugins:
   - serverless-offline
@@ -92,27 +92,6 @@ functions:
     handler: api/Incidents.incidents
     events:
       - http:
-          path: api/Incidents
+          path: api/incidents
           method: get
-          cors: true
-  Incident:
-    handler: api/Incident.incident
-    events:
-      - http:
-          path: api/Incident
-          method: get
-          cors: true
-  IncidentClose:
-    handler: api/IncidentClose.incidentclose
-    events:
-      - http:
-          path: api/IncidentClose
-          method: post
-          cors: true
-  MergeIncidents:
-    handler: api/MergeIncidents.mergeIncidents
-    events:
-      - http:
-          path: api/mergeIncidents
-          method: put
           cors: true
