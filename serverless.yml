@@ -20,6 +20,37 @@ functions:
     handler: api/Incidents.incidents
     events:
       - http:
+          integration: lambda
           path: api/Incidents
           method: get
+          cors: true
+  ModuleStatus:
+    handler: api//Modules.GetModuleStatus
+    events:
+      - http:
+          integration: lambda
+          path: api/ModuleStatus
+          method: get
+          cors: true
+          request:
+            template:
+              application/json: >
+               {
+                 "foo" : "$input.params('foo')",
+                 "someData": "$input.params('some_data')"
+               }
+  ModuleStatusWithID:
+    handler: api//Modules.GetModuleStatus
+    events:
+      - http:
+          path: api/ModuleStatus/{moduleId}
+          method: get
+          cors: true
+  ModuleError:
+    handler: api/Modules.PostModuleError
+    events:
+      - http:
+          integration: lambda
+          path: api/ModuleError
+          method: post
           cors: true
