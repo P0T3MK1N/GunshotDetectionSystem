@@ -1,10 +1,8 @@
-'use strict';
-
 /**
  * Created by halla on 1/16/2017.
  */
 
-//var Incidents = require('../services/Incidents.js');
+'use strict';
 
 /**
  * Incidents API endpoint
@@ -12,24 +10,16 @@
  * @param context
  * @param callback
  */
-module.exports.incidents = (event, context, callback) => {//handler
+var incidents = require('../services/Incidents.js');//get data
 
-    getCurrentIncidents(
+module.exports.incidents = (event, context, callback) => {//handler
+    incidents.getCurrentIncidents(
         (error, result) => { // [function: param1([param1, param2])]
             if (error) {
-                callback(null,{statusCode: 402, body: error});
+                callback("[BadRequest]" + JSON.stringify(error.error));
             }
             else {
-                callback(null,{statusCode: 200, body: result});
+                callback(null, {statusCode: 200, body: JSON.stringify(result)});
             }
         });
 };
-
-function getCurrentIncidents(callback) {
-    var incidents = require('../mock_data/Incidents.json');//get data
-    if (incidents) {//if data return data
-        callback(null, incidents);
-    } else {//else return error
-        callback({error: 'Could not retrieve data'}, null);
-    }
-}

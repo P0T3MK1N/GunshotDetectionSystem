@@ -1,15 +1,15 @@
-'use strict';
-
 /**
  * Created by halla on 1/16/2017.
  */
 
-function Incidents () {
+'use strict';
+
+class incidents {
     /**
-     * Get Current Incidents
+     * Get Incidents
      * @param callback
      */
-    Incidents.prototype.getCurrentIncidents = function(callback) {
+    static getCurrentIncidents(callback) {
         var incidents = require('../mock_data/Incidents.json');//get data
         if (incidents) {//if data return data
             callback(null, incidents);
@@ -17,7 +17,5 @@ function Incidents () {
             callback({error: 'Could not retrieve data'}, null);
         }
     }
-
 }
-
-module.exports = new Incidents();
+module.exports = incidents;

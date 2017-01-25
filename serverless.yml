@@ -3,7 +3,7 @@
 #version pinned to ensure all use same version of framework.
 #frameworkVersion: "=1.5"
 
-service: GunShotDetectionPlatformTest1
+service: GunShotDetectionSystemDev001
 
 plugins:
   - serverless-offline
@@ -11,87 +11,15 @@ plugins:
 provider:
   name: aws
   runtime: nodejs4.3
-  #stage: dev
+  stage: dev
   region: eu-west-1
-  #profile: mainuser
-  #profile: development
 
-  #role: arn:aws:iam::350584043451:role/ServerlessFrameworkUser
-
-
-#export AWS_ACCESS_KEY_ID=<AKIAIXLREEEUI3YEJOIQ>
-#export AWS_SECRET_ACCESS_KEY=<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>
-# AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are now available for serverless to use
-#serverless deploy
 
 functions:
-  ModuleStatusGet:
-    handler: api/ModuleStatus.moduleStatus
-    events:
-      - http:
-          path: api/ModuleStatus
-          method: get
-          cors: true
-  ModuleStatusPost:
-    handler: api/ModuleStatus.moduleStatus
-    events:
-      - http:
-          path: api/ModuleStatus
-          method: post
-          cors: true
-  ModuleEvent:
-    handler: api/ModuleEvent.moduleEvent
-    events:
-      - http:
-          path: api/ModuleEvent
-          method: post
-          cors: true
-  ModuleUpdate:
-    handler: api/ModuleUpdate.moduleUpdate
-    events:
-      - http:
-          path: api/ModuleUpdate
-          method: get
-          cors: true
-  ModuleError:
-    handler: api/ModuleError.moduleError
-    events:
-      - http:
-          path: api/ModuleError
-          method: post
-          cors: true
-  Events:
-    handler: api/Events.events
-    events:
-      - http:
-          path: api/Events
-          method: get
-          cors: true
-  Cameras:
-    handler: api/Cameras.cameras
-    events:
-      - http:
-          path: api/Cameras
-          method: get
-          cors: true
-  Audio:
-    handler: api/Audio.audio
-    events:
-      - http:
-          path: api/Audio
-          method: get
-          cors: true
-  Report:
-    handler: api/Report.report
-    events:
-      - http:
-          path: api/Report
-          method: get
-          cors: true
   Incidents:
     handler: api/Incidents.incidents
     events:
       - http:
-          path: api/incidents
+          path: api/Incidents
           method: get
           cors: true
