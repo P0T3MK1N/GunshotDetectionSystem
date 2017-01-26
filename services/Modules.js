@@ -9,24 +9,20 @@ class Module {
      * Get ModuleStatus
      * @param callback
      */
-    static getModuleStatus(callback,moduleId) {
+    static reportModuleStatus(callback,moduleId) { //not pointing properly
         if(moduleId){
             var moduleStatus = require('../mock_data/ModuleStatus_ID_1.json');//get data
             if (moduleStatus) {//if data return data
                 callback(null, moduleStatus);
-                console.log("pointb2")
             } else {//else return error
-                console.log("pointb2")
-                callback(null, {error: 'Could not retrieve data'});
+                callback({error: 'Could not retrieve data'}, null);
             }
         }
         else {
             var moduleStatus = require('../mock_data/ModuleStatus.json');//get data
             if (moduleStatus) {//if data return data
-                console.log("pointb3")
                 callback(null, moduleStatus);
             } else {//else return error
-                console.log("pointb4")
                 callback({error: 'Could not retrieve data'}, null);
             }
         }

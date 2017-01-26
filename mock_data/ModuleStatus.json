@@ -3,7 +3,7 @@
     "sector_id": 1,
     "module_list": [
       {
-        "modules_id": 1,
+        "module_id": 1,
         "module_name": "module_1",
         "module_version": "v1.0",
         "dts": "dts",

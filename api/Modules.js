@@ -4,7 +4,7 @@
 
 'use strict';//required for AWS Lambdas
 var Module = require('../services/Modules.js');
-
+var Serverless = require ('../services/Serverless.js');
 /**
  * Get Module Status API endpoint
  * @param event
@@ -14,19 +14,21 @@ var Module = require('../services/Modules.js');
  */
 
 module.exports.GetModuleStatus = (event, context, callback) => {//handler     //event.path.id for path variables     //event.query.id for query variables
-    Module.getModuleStatus(
-        (error, result) => { // [function: param1([param1, param2])]
-            if(!error) {
-                var cError = {
-                    httpStatus: 404,
-                    code: "NotFound",
-                    message: "The requested resource was not found"
-                };
-                callback (null, cError)}
-            else {
-                callback(null, result);
-            }
-        }, event.path.moduleId);
+    try {
+        if(event.query.param == "fail")Module.fail();
+        Module.reportModuleStatus(
+            (error, result) => { // [function: param1([param1, param2])]
+                if (error) {
+                    Serverless.failResponse(callback, 404,JSON.stringify(error));
+                }
+                else {
+                    callback(null, result);
+                }
+            }, event.path.moduleId);
+
+    }catch(error){
+        Serverless.failResponse(callback, 500,error.errorMessage, error.stack);
+    }
 };
 
 /**
@@ -43,7 +45,7 @@ module.exports.PostModuleError = (event, context, callback) => {//handler
                 callback("[BadRequest]" + JSON.stringify(error.error));
             }
             else {
-                callback(null, {statusCode: 200, body: JSON.stringify(result)});
+                callback(null, result);
             }
         });
 };
