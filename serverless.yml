@@ -3,7 +3,7 @@
 #version pinned to ensure all use same version of framework.
 #frameworkVersion: "=1.5"
 
-service: GunShotDetectionSystemDev007
+service: GunShotDetectionSystemDev008
 
 plugins:
   - serverless-offline
@@ -13,7 +13,6 @@ provider:
   runtime: nodejs4.3
   stage: dev
   region: eu-west-1
-
 
 functions:
   ModuleStatusWithId:
